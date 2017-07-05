@@ -74,15 +74,18 @@ class LoginViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    addDoneButtonToKeyboard()
     initFirebaseStateListener()
   }
   
   func initFirebaseStateListener() {
+    
     FIRAuth.auth()!.addStateDidChangeListener() { auth, user in
       if user != nil {
         self.performSegue(withIdentifier: self.loginToList, sender: nil)
       }
     }
+    
   }
   
 }
@@ -99,4 +102,34 @@ extension LoginViewController: UITextFieldDelegate {
     return true
   }
   
+}
+
+// MARK: Keyboard handle
+extension LoginViewController {
+  
+  func addDoneButtonToKeyboard() {
+    
+    let doneToolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
+    doneToolbar.barStyle       = UIBarStyle.default
+    let flexSpace              = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+    let done: UIBarButtonItem  = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.done, target: self, action: #selector(doneButtonAction))
+    
+    var items = [UIBarButtonItem]()
+    items.append(flexSpace)
+    items.append(done)
+    
+    doneToolbar.items = items
+    doneToolbar.sizeToFit()
+    
+    self.textFieldLoginEmail.inputAccessoryView = doneToolbar
+    self.textFieldLoginPassword.inputAccessoryView = doneToolbar
+
+  }
+  
+  func doneButtonAction() {
+    
+    self.textFieldLoginEmail.resignFirstResponder()
+    self.textFieldLoginPassword.resignFirstResponder()
+    
+  }
 }
