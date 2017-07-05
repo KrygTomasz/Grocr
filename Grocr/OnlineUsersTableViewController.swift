@@ -28,12 +28,48 @@ class OnlineUsersTableViewController: UITableViewController {
   let userCell = "UserCell"
   
   // MARK: Properties
+  let usersRef = FIRDatabase.database().reference(withPath: "online")
+  
+  var user: User!
   var currentUsers: [String] = []
   
   // MARK: UIViewController Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
-    currentUsers.append("hungry@person.food")
+    initOnlineUsersObserver()
+  }
+  
+  func initOnlineUsersObserver() {
+    
+    usersRef.observe(.childAdded, with: {
+      snap in
+      guard let email = snap.value as? String else { return }
+      self.currentUsers.append(email)
+      let row = self.currentUsers.count - 1
+      let indexPath = IndexPath(row: row, section: 0)
+      self.tableView.insertRows(at: [indexPath], with: .top)
+    })
+    
+    usersRef.observe(.childRemoved, with: { snap in
+      guard let emailToFind = snap.value as? String else { return }
+      for (index, email) in self.currentUsers.enumerated() {
+        if email == emailToFind {
+          let indexPath = IndexPath(row: index, section: 0)
+          self.currentUsers.remove(at: index)
+          self.tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+      }
+    })
+    
+    FIRAuth.auth()!.addStateDidChangeListener { auth, user in
+      if let _user = user {
+        self.user = User(authData: _user)
+      } else {
+        let userRef = self.usersRef.child(self.user.uid)
+        userRef.removeValue()
+      }
+    }
+    
   }
   
   // MARK: UITableView Delegate methods
@@ -52,7 +88,12 @@ class OnlineUsersTableViewController: UITableViewController {
   // MARK: Actions
   
   @IBAction func signoutButtonPressed(_ sender: AnyObject) {
-    dismiss(animated: true, completion: nil)
+    do {
+      try FIRAuth.auth()?.signOut()
+      dismiss(animated: true, completion: nil)
+    } catch {
+      
+    }
   }
   
 }

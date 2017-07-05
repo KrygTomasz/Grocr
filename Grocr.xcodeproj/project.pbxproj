@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		22A35A3B1F0D67CD00C236C8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22A35A3A1F0D67CD00C236C8 /* GoogleService-Info.plist */; };
-		941A68C9047CFC613264BFB7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F599D9265F4B40571F432E78 /* libPods.a */; };
+		22A35A401F0D699C00C236C8 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A35A3F1F0D699C00C236C8 /* R.generated.swift */; };
 		BB2385621B3DD5AB0079CD01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2385611B3DD5AB0079CD01 /* AppDelegate.swift */; };
 		BB2385641B3DD5AB0079CD01 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2385631B3DD5AB0079CD01 /* LoginViewController.swift */; };
 		BB2385671B3DD5AB0079CD01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB2385651B3DD5AB0079CD01 /* Main.storyboard */; };
@@ -18,12 +18,13 @@
 		BB23858A1B3DD9640079CD01 /* GroceryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2385891B3DD9640079CD01 /* GroceryItem.swift */; };
 		BB30CD4A1B439B60004B3177 /* OnlineUsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB30CD491B439B60004B3177 /* OnlineUsersTableViewController.swift */; };
 		BB7DA5111B42C8100018B530 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7DA5101B42C8100018B530 /* User.swift */; };
+		FC6EF1946C1D7600FBCD42F4 /* Pods_Grocr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B1BA4130B8A87CC139C6E0 /* Pods_Grocr.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		22A35A3A1F0D67CD00C236C8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		9BA2A2DB5BA4733818152B9B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		A898E3AE11425E4495FAC93A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		22A35A3F1F0D699C00C236C8 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		22A35A411F0D7EFA00C236C8 /* Grocr.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Grocr.entitlements; sourceTree = "<group>"; };
 		BB23855C1B3DD5AB0079CD01 /* Grocr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grocr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB2385601B3DD5AB0079CD01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB2385611B3DD5AB0079CD01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,7 +37,9 @@
 		BB2385891B3DD9640079CD01 /* GroceryItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryItem.swift; sourceTree = "<group>"; };
 		BB30CD491B439B60004B3177 /* OnlineUsersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnlineUsersTableViewController.swift; sourceTree = "<group>"; };
 		BB7DA5101B42C8100018B530 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		F599D9265F4B40571F432E78 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6B1BA4130B8A87CC139C6E0 /* Pods_Grocr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Grocr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8FDBF1B5B5E7DF71936C712 /* Pods-Grocr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grocr.release.xcconfig"; path = "Pods/Target Support Files/Pods-Grocr/Pods-Grocr.release.xcconfig"; sourceTree = "<group>"; };
+		FD9CC15E360B1C739CF35E6B /* Pods-Grocr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grocr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Grocr/Pods-Grocr.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,20 +47,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				941A68C9047CFC613264BFB7 /* libPods.a in Frameworks */,
+				FC6EF1946C1D7600FBCD42F4 /* Pods_Grocr.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5BCB7DE7572521D09DC0AA00 /* Pods */ = {
+		0DF004C38A423A753C62CA2A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9BA2A2DB5BA4733818152B9B /* Pods.debug.xcconfig */,
-				A898E3AE11425E4495FAC93A /* Pods.release.xcconfig */,
+				FD9CC15E360B1C739CF35E6B /* Pods-Grocr.debug.xcconfig */,
+				E8FDBF1B5B5E7DF71936C712 /* Pods-Grocr.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		6082065D74F63D4CFE1F8778 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D6B1BA4130B8A87CC139C6E0 /* Pods_Grocr.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		BB2385531B3DD5AB0079CD01 = {
@@ -65,8 +76,8 @@
 			children = (
 				BB23855E1B3DD5AB0079CD01 /* Grocr */,
 				BB23855D1B3DD5AB0079CD01 /* Products */,
-				5BCB7DE7572521D09DC0AA00 /* Pods */,
-				C8A8CAF31E6679C1B66E9218 /* Frameworks */,
+				0DF004C38A423A753C62CA2A /* Pods */,
+				6082065D74F63D4CFE1F8778 /* Frameworks */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -83,6 +94,7 @@
 		BB23855E1B3DD5AB0079CD01 /* Grocr */ = {
 			isa = PBXGroup;
 			children = (
+				22A35A411F0D7EFA00C236C8 /* Grocr.entitlements */,
 				BB2385881B3DD9550079CD01 /* Models */,
 				BB2385811B3DD8310079CD01 /* Controllers */,
 				BB2385821B3DD8490079CD01 /* Layouts */,
@@ -99,6 +111,7 @@
 				22A35A3A1F0D67CD00C236C8 /* GoogleService-Info.plist */,
 				BB2385601B3DD5AB0079CD01 /* Info.plist */,
 				BB2385851B3DD8820079CD01 /* Grocr-Bridging-Header.h */,
+				22A35A3F1F0D699C00C236C8 /* R.generated.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -139,14 +152,6 @@
 			name = Other;
 			sourceTree = "<group>";
 		};
-		C8A8CAF31E6679C1B66E9218 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F599D9265F4B40571F432E78 /* libPods.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -154,12 +159,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BB23857B1B3DD5AB0079CD01 /* Build configuration list for PBXNativeTarget "Grocr" */;
 			buildPhases = (
-				271B2361A34E68199850C66E /* Check Pods Manifest.lock */,
+				F57DFCB6389C94D0B584DB32 /* [CP] Check Pods Manifest.lock */,
+				22A35A3C1F0D68F600C236C8 /* ShellScript */,
 				BB2385581B3DD5AB0079CD01 /* Sources */,
 				BB2385591B3DD5AB0079CD01 /* Frameworks */,
 				BB23855A1B3DD5AB0079CD01 /* Resources */,
-				3AAA8D86D4ADEB9EEF3F0820 /* Copy Pods Resources */,
-				49E4AC6533427A10BAC363B2 /* Embed Pods Frameworks */,
+				B56B1251A61AFF8B86489243 /* [CP] Embed Pods Frameworks */,
+				CD49D62B2022160F96427794 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -181,6 +187,7 @@
 				TargetAttributes = {
 					BB23855B1B3DD5AB0079CD01 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 9Q8P88U6B9;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -188,6 +195,9 @@
 								enabled = 0;
 							};
 							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.Push = {
 								enabled = 0;
 							};
 						};
@@ -227,49 +237,62 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		271B2361A34E68199850C66E /* Check Pods Manifest.lock */ = {
+		22A35A3C1F0D68F600C236C8 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT\"";
+		};
+		B56B1251A61AFF8B86489243 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Grocr/Pods-Grocr-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3AAA8D86D4ADEB9EEF3F0820 /* Copy Pods Resources */ = {
+		CD49D62B2022160F96427794 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Grocr/Pods-Grocr-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		49E4AC6533427A10BAC363B2 /* Embed Pods Frameworks */ = {
+		F57DFCB6389C94D0B584DB32 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -280,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB2385641B3DD5AB0079CD01 /* LoginViewController.swift in Sources */,
+				22A35A401F0D699C00C236C8 /* R.generated.swift in Sources */,
 				BB2385841B3DD8660079CD01 /* GroceryListTableViewController.swift in Sources */,
 				BB23858A1B3DD9640079CD01 /* GroceryItem.swift in Sources */,
 				BB30CD4A1B439B60004B3177 /* OnlineUsersTableViewController.swift in Sources */,
@@ -394,12 +418,14 @@
 		};
 		BB23857C1B3DD5AB0079CD01 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9BA2A2DB5BA4733818152B9B /* Pods.debug.xcconfig */;
+			baseConfigurationReference = FD9CC15E360B1C739CF35E6B /* Pods-Grocr.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Grocr/Grocr.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 9Q8P88U6B9;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Grocr/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -417,12 +443,14 @@
 		};
 		BB23857D1B3DD5AB0079CD01 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A898E3AE11425E4495FAC93A /* Pods.release.xcconfig */;
+			baseConfigurationReference = E8FDBF1B5B5E7DF71936C712 /* Pods-Grocr.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Grocr/Grocr.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 9Q8P88U6B9;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Grocr/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
