@@ -1,5 +1,10 @@
 inhibit_all_warnings!
 
-pod 'Firebase/Core'
-pod 'Firebase/Database'
-pod 'Firebase/Auth'
+use_frameworks!
+
+target "Grocr" do
+    pod 'Firebase/Core'
+    pod 'Firebase/Database'
+    pod 'Firebase/Auth'
+    pod 'R.swift'
+end
